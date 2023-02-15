@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { tenantInfoAdded } from "./tenantSlice";
 import { Formik, Form} from "formik";
-import { rentInfoAdded } from "./rentSlice";
 import * as Yup from "yup";
 import {
   MyTextInput,
@@ -12,7 +12,7 @@ import {
 } from "../../formik/formikComponents";
 
 const phoneRegex =/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
-const AddRentForm = () => {
+const AddTenantForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
@@ -40,7 +40,7 @@ const AddRentForm = () => {
         })}
         onSubmit={(values) => {
           dispatch(
-            rentInfoAdded(
+            tenantInfoAdded(
               values.creater,
               values.title,
               values.description,
@@ -53,7 +53,7 @@ const AddRentForm = () => {
       >
         {(formik) => (
           <Form className="addRentForm form" onSubmit={formik.handleSubmit}>
-            <h1>Share a new Rent</h1>
+            <h1>Post your tenant Information</h1>
             <MyTextInput label="Title" name="title" className="titleInput" />
             <MyTextArea
               label="Description"
@@ -101,4 +101,4 @@ const AddRentForm = () => {
   );
 };
 
-export default AddRentForm;
+export default AddTenantForm;

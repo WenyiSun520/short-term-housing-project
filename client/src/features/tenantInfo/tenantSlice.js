@@ -2,42 +2,36 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = [
   {
-    id: "01",
+    id: "03",
     creater: "winnieee_sun",
     create_date: new Date().toISOString(),
-    title: "Studio Sublease in U-distrct",
+    title: "Want a Studio next to Redmond Microsoft",
     description:
-      "250ft Studio located next to UW campass. Five mins walk to school, 10 mins walk to H-mart. The rent is $1000/month not include utility, internet fee",
+      "I'm student from CA and I have a summer intern at Redmond MS. I'm looking for a studio from 7.15 to 9.15",
     contact: { email: "winnieee.sun@gmail.com", tel: "425-000-0000" },
     social_media: { type: "instagram", account: "winnieee_sun" },
   },
   {
-    id: "02",
+    id: "04",
     creater: "winnieee_sun",
     create_date: new Date().toISOString(),
-    title: "Studio Sublease in U-distrct",
+    title: "Want a Studio next to Redmond Microsoft",
     description:
-      "250ft Studio located next to UW campass. Five mins walk to school, 10 mins walk to H-mart. The rent is $1000/month not include utility, internet fee",
+      "I'm student from CA and I have a summer intern at Redmond MS. I'm looking for a studio from 7.15 to 9.15",
     contact: { email: "winnieee.sun@gmail.com", tel: "425-000-0000" },
     social_media: { type: "instagram", account: "winnieee_sun" },
   },
 ];
 
-const rentInfoSlice = createSlice({
-  name: "rentsInfo",
+const tenantInfoSlice = createSlice({
+  name: "tenantsInfo",
   initialState,
   reducers: {
-    rentInfoAdded: {
+    tenantInfoAdded: {
       reducer(state, action) {
         state.push(action.payload);
       },
-      prepare(      
-        creater,
-        title,
-        description,
-        contact,
-        social_media
-      ) {
+      prepare(creater, title, description, contact, social_media) {
         return {
           payload: {
             id: nanoid(),
@@ -53,5 +47,5 @@ const rentInfoSlice = createSlice({
     },
   },
 });
-export const { rentInfoAdded } = rentInfoSlice.actions;
-export default rentInfoSlice.reducer;
+export const {tenantInfoAdded} = tenantInfoSlice.actions;
+export default tenantInfoSlice.reducer;

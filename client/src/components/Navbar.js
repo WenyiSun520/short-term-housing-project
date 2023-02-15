@@ -8,12 +8,17 @@ const Navbar = ()=>{
           <p>
             <Link to="/addRent">Post a rent</Link>
           </p>
+          <p>
+            <Link to="/addTenant">Post a Tenant</Link>
+          </p>
         </div>
         <nav className="navbar">
           <Link to="/">
-            <div className="nav-item">Renting</div>
+            <div className="nav-item">Lease/subLease Info</div>
           </Link>
-          <div className="nav-item">Asking for Rent</div>
+          <Link to="/tenants">
+            <div className="nav-item">Tenant</div>
+          </Link>
         </nav>
       </section>
     );

@@ -35,12 +35,31 @@ code {
 }
 
 .form input,.form textarea,.form select,.form button {
+  width: 500px;
   height: 50px;
   font-size: 18px;
-  width: max-content;
 }
 
 .form textarea {
-  width:500px;
   height:250px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+/* CSS for Comment Section */
+.commentSection {
+  display: flex;
+  flex-direction: column;
+}
+.commentPost {
+  border:solid 1px black;
+  padding:10px;
+  margin:5px;
+}
+
+.commentPoster {
+  font-weight: bold;
 }

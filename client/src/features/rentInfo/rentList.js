@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import {useSelector} from 'react-redux';
-import TimeStamp from '../util/timestamp';
+import TimeStamp from '../../util/timestamp';
 
 const RentList = ()=>{
     const rentinfo = useSelector((state)=>state.rentsInfo);
